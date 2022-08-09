@@ -247,7 +247,7 @@ class compression:
                                                     
                                                     if Doc==1:
                                                        
-                                                        Deep_long=long2//1023
+                                                        Deep_long=long2//long_block
                                                         b=format(Deep_long,'048b')
                                                         if len(b)>48:
                                                             print("File too big")
@@ -639,7 +639,7 @@ class compression:
                                     long2=len(size_data3)
                                     Deep=long2//28
                                     times2=Deep
-                                    long_block=1023-1
+                                    long_block=1023
                                     Where5=0
                                     before_block=0
                                     check_size_block=0
@@ -664,10 +664,7 @@ class compression:
                                         
                                     while  times_of_times1!=Times_compression:
 
-                                                    if Doc==1:
-                                                       
-                                                        Deep_long=int(size_data3[:48],2)
-                                                        size_data3=size_data3[48:]
+                                                    
 
                                                     
                                                    
@@ -677,6 +674,10 @@ class compression:
                                                    
                                                     blocks=long_block
                                                     long2=len(size_data3)
+                                                    if Doc==1:
+                                                       
+                                                        Deep_long=int(size_data3[:48],2)
+                                                        size_data3=size_data3[48:]
                                                     size_compress=63
                                                     end=blocks
                                                     
