@@ -369,8 +369,11 @@ class compression:
                                                     
                                         long_after=len(size_data3)
                                         long2=len(size_data3)
-                                        
-                                        size_data9=b+size_data3
+
+                                        if Doc==1:
+                                            size_data9=b+size_data3
+                                        else:
+                                            size_data9=size_data3
 
                                         
                                         long_file=len(size_data10)
